@@ -1,0 +1,36 @@
+
+// INSERT
+
+INSERT INTO `joke`
+(`joketext`, `jokedate`) VALUES (
+"SQL \` \' SS",
+"2021-02-03")
+
+INSERT INTO `joke` SET
+`joketext` = "안녕",
+`jokedate` = "2021-02-03"
+
+
+// LEFT
+SELECT LEFT(`jokedate`, 5) from `joke`
+
+// WHERE, COUNT
+SELECT COUNT(*) FROM `joke` WHERE `jokedate` >= "2020-01-01"
+
+// LINE, AND
+SELECT `joketext` FROM `joke` WHERE `joketext` LIKE "%프로그래머%"
+SELECT `joketext` FROM `joke` WHERE `joketext` LIKE "%프로그래머%" AND `jokedate` >= "2021-02-02"
+
+//UPDATE
+UPDATE `joke` SET 
+`jokedate` = "2014-03-23", 
+`joketext` = "변환 완료"
+WHERE `id` = "1"
+
+UPDATE `joke` SET 
+`jokedate` = "2014-03-23", 
+`joketext` = "잘까?"
+WHERE `joketext` LIKE "%아내가%" //전부
+
+//DELETE
+DELETE FROM `joke` WHERE `id` > "4"
