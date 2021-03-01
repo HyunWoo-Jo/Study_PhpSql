@@ -34,3 +34,9 @@ WHERE `joketext` LIKE "%아내가%" //전부
 
 //DELETE
 DELETE FROM `joke` WHERE `id` > "4"
+
+//INNER JOIN, ON, 다중 테이블 선택 검색
+SELECT * FROM ijdb.joke INNER JOIN `ijdb`.`author`
+	ON `authorid` = `author`.`id`
+    WHERE `name` = 'Unity';
+	ON `authorid` = `author`.`id`;
